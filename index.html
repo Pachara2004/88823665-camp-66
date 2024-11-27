@@ -7,12 +7,79 @@
 </head>
 
 <body>
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
-    <h6>Heading 6</h6>
+    <h1>Workshop #HTML-FORM</h1>
+    <form>
+        <table>
+            <tr>
+                <th scope="row" style="text-align: left;"><label for="Firstname">ชื่อ</label></th>
+                <td><input type="text" id="Firstname" name="Firstname"></td>
+            </tr>
+            <tr>
+                <th scope="row" style="text-align: left;"><label for="Lastname">สกุล</label></th>
+                <td><input type="text" id="Lastname" name="Lastname"></td>
+            </tr>
+            <tr>
+                <th scope="row" style="text-align: left;"><label for="Date">วัน/เดือน/ปีเกิด</label></th>
+                <td><input type="date" id="Date" name="Date"></td>
+            </tr>
+            <tr>
+                <th scope="row" style="text-align: left;"><label for="Age">อายุ</label></th>
+                <td><input type="number" id="Age" name="Age" min="0"></td>
+            </tr>
+            <tr>
+                <th scope="row" style="text-align: left;"><label for="Sex">เพศ</label></th>
+                <td>
+                    <input type="radio" id="SexMale" name="Sex" value="Male">
+                    <label for="SexMale">ชาย</label>
+                    <input type="radio" id="SexFemale" name="Sex" value="Female">
+                    <label for="SexFemale">หญิง</label>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" style="text-align: left;"><label for="Photo">รูป</label></th>
+                <td><input type="file" id="Photo" name="Photo"></td>
+            </tr>
+            <tr>
+                <th scope="row" style="text-align: left;"><label for="Address">ที่อยู่</label></th>
+                <td><textarea id="Address" name="Address" rows="5" cols="22"></textarea></td>
+            </tr>
+            <tr>
+                <th scope="row" style="text-align: left;"><label for="Color">สีที่ชอบ</label></th>
+                <td>
+                    <select id="Color" name="Color" size="1">
+                        <option value="สีแดง">สีแดง</option>
+                        <option value="สีน้ำเงิน">สีน้ำเงิน</option>
+                        <option value="สีเขียว">สีเขียว</option>
+                        <option value="สีเหลือง">สีเหลือง</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" style="text-align: left;"><label for="Music">แนวเพลงที่ชอบ</label></th>
+                <td>
+                    <input type="radio" id="เพื่อชีวิต" name="Music" value="เพื่อชีวิต">
+                    <label for="เพื่อชีวิต">เพื่อชีวิต</label>
+                    <input type="radio" id="ลูกทุ่ง" name="Music" value="ลูกทุ่ง">
+                    <label for="ลูกทุ่ง">ลูกทุ่ง</label>
+                    <input type="radio" id="อื่นๆ" name="Music" value="อื่นๆ">
+                    <label for="อื่นๆ">อื่นๆ</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><br>
+                    <input type="checkbox" id="Check" name="Consent" value="Agree">
+                    <label for="Check">ยินยอมให้เก็บข้อมูล</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: left"><br><br>
+                    <input type="reset" id="Reset" name="Reset" value="Reset">
+                    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+                    <input type="submit" id="Submit" name="Submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
 
 </html>
