@@ -1,7 +1,21 @@
 body {
-    font-family: "Noto Sans Thai", sans-serif;
+    font-family: "Sarabun", sans-serif;
+    font-weight: 700;
     font-style: normal;
-    background-color: #E5E3D4;
+    background: linear-gradient(100000deg, #E5E3D4, #FFFFFF);
+}
+
+
+
+h1 {
+    font-family: "Sarabun", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #FFF;
+    background-color: #567D46;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 15px 30px;
+    border-radius: 10px;
 }
 
 h1:hover {
@@ -9,28 +23,47 @@ h1:hover {
     background-color: #000000;
 }
 
-h1 {
-    font-family: "Anton", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #000000;
-    background-color: #859F3D;
-    font-family: Arial;
-    padding: 10px;
-    display: inline-block;
+table {
+    margin: 0 auto;
+    border-spacing: 10px;
+}
+label:hover {
+    color: #E38E49;
 }
 
-.class-p {
-    color: green;
-}
 
-#Firstname, #Lastname, #Date, #Date, #Address{
-    color: rgb(0, 0, 0);  
+
+
+#Firstname,#Lastname,#Date,#Age,#Address {
+    border: 1px solid #ccc;
+    padding: 5px;
     background-color: #ffffff;
+    width: 100%;
+
 
 }
-#Firstname:hover, #Lastname:hover, #Date:hover, #Age:hover, #Address:hover{
-    color: rgb(255, 255, 255); 
-    background-color: #000000;
+
+#Firstname:hover,#Lastname:hover,#Date:hover,#Age:hover,#Address:hover {
+    color: #0A3981;
+    background-color: #e7fae1;
+    transition: all 0.3s ease;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+#Submit,#Reset {
+    border-radius: 4px;
+    width: 100%;
+}
+#Submit:hover, #Reset:hover {
+    border-radius: 10px;
+    padding: 5px;
+    transition: all 0.1s ease;
+    border: 3px solid #000000;
+
 
 }
