@@ -23,12 +23,5 @@ p {
     border: 5px solid rgb(34, 223, 201);
 }
 
-h1 {
-    border-style: dashed;
-    border-width: 2px;
-    border-radius: 5px;
-    border-top-style: dotted;
-    border-color: black;
-    margin-top: 10px;
-}
+
 
