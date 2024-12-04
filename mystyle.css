@@ -4,6 +4,14 @@ body {
 
 }
 
+h1 {
+    color: #9ABF80;
+    background-color: #1C325B;
+    font-family: Arial;
+    padding: 10px;
+    display: inline-block;
+}
+
 p {
     font-size: 10pt;
     color: red;
@@ -22,6 +30,3 @@ p {
     padding-left: 20px;
     border: 5px solid rgb(34, 223, 201);
 }
-
-
-
