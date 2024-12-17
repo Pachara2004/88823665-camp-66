@@ -5,7 +5,10 @@ body {
     background: linear-gradient(100000deg, #E5E3D4, #FFFFFF);
 }
 
-
+.alltext{
+    margin-left: auto;
+    margin-right: auto;
+}
 
 h1 {
     font-family: "Sarabun", sans-serif;
