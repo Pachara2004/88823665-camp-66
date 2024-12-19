@@ -24,84 +24,105 @@
 </head>
 
 <body>
-    <div class="container mt-3">
+    <div class="container mt-4">
+        <!-- ชื่อ -->
+        <div class="mb-3 row">
+            <label for="Firstname" class="col-sm-3 col-form-label">ชื่อ</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="Firstname" name="Firstname" placeholder="ชื่อ">
+            </div>
+        </div>
 
-        
-        <form>
-            <table class="alltext">
-                <tr>
-                    <td><label for="Firstname">ชื่อ</label></td>
-                    <td><input type="text" id="Firstname" name="Firstname"></td>
-                </tr>
-                <tr>
-                    <td><label for="Lastname">สกุล</label></td>
-                    <td><input type="text" id="Lastname" name="Lastname"></td>
-                </tr>
-                <tr>
-                    <td><label for="Date">วัน/เดือน/ปีเกิด</label></td>
-                    <td><input type="date" id="Date" name="Date"></td>
-                </tr>
-                <tr>
-                    <td><label for="Age">อายุ</label></td>
-                    <td><input type="number" id="Age" name="Age" min="0"></td>
-                </tr>
-                <tr>
-                    <td><label for="Sex">เพศ</label></td>
-                    <td>
-                        <input type="radio" id="SexMale" name="Sex" value="Male">
-                        <label for="SexMale">ชาย</label>
-                        <input type="radio" id="SexFemale" name="Sex" value="Female">
-                        <label for="SexFemale">หญิง</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="Photo">รูป</label></td>
-                    <td><input type="file" id="Photo" name="Photo"></td>
-                </tr>
-                <tr>
-                    <td><label for="Address">ที่อยู่</label></td>
-                    <td><textarea id="Address" name="Address" rows="5" cols="22"></textarea></td>
-                </tr>
-                <tr>
-                    <td><label for="Color">สีที่ชอบ</label></td>
-                    <td>
-                        <select id="Color" name="Color" size="1">
-                            <option value="สีแดง">สีแดง</option>
-                            <option value="สีน้ำเงิน">สีน้ำเงิน</option>
-                            <option value="สีเขียว">สีเขียว</option>
-                            <option value="สีเหลือง">สีเหลือง</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label for="Music">แนวเพลงที่ชอบ</label></td>
-                    <td>
-                        <input type="radio" id="เพื่อชีวิต" name="Music" value="เพื่อชีวิต">
-                        <label for="เพื่อชีวิต">เพื่อชีวิต</label>
-                        <input type="radio" id="ลูกทุ่ง" name="Music" value="ลูกทุ่ง">
-                        <label for="ลูกทุ่ง">ลูกทุ่ง</label>
-                        <input type="radio" id="อื่นๆ" name="Music" value="อื่นๆ">
-                        <label for="อื่นๆ">อื่นๆ</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><br>
-                        <input type="checkbox" id="Check" name="Consent" value="Agree">
-                        <label for="Check">ยินยอมให้เก็บข้อมูล</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td><br>
-                        <input style="background-color: #FF8A8A; padding: 8px" type="reset" id="Reset" name="Reset"
-                            value="Reset">
-                    </td>
-                    <td><br>
-                        <input style="background-color: #CCE0AC; padding: 8px" type="submit" id="Submit" name="Submit"
-                            value="Submit">
-                    </td>
-                </tr>
-            </table>
-        </form>
+        <!-- สกุล -->
+        <div class="mb-3 row">
+            <label for="Lastname" class="col-sm-3 col-form-label">สกุล</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="Lastname" name="Lastname">
+            </div>
+        </div>
+
+        <!-- วัน/เดือน/ปีเกิด -->
+        <div class="mb-3 row">
+            <label for="Date" class="col-sm-3 col-form-label">วัน/เดือน/ปีเกิด</label>
+            <div class="col-sm-9">
+                <input type="date" class="form-control" id="Date" name="Date">
+            </div>
+        </div>
+
+        <!-- อายุ -->
+        <div class="mb-3 row">
+            <label for="Age" class="col-sm-3 col-form-label">อายุ</label>
+            <div class="col-sm-9">
+                <input type="number" class="form-control" id="Age" name="Age" min="0">
+            </div>
+        </div>
+
+        <!-- เพศ -->
+        <div class="mb-3">
+            <label class="form-label">เพศ</label>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="SexMale" name="Sex" value="Male">
+                <label for="SexMale" class="form-check-label">ชาย</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="SexFemale" name="Sex" value="Female">
+                <label for="SexFemale" class="form-check-label">หญิง</label>
+            </div>
+        </div>
+
+        <!-- รูป -->
+        <div class="mb-3 row">
+            <label for="Photo" class="col-sm-3 col-form-label">รูป</label>
+            <div class="col-sm-9">
+                <input type="file" class="form-control" id="Photo" name="Photo">
+            </div>
+        </div>
+
+        <!-- ที่อยู่ -->
+        <div class="mb-3">
+            <label for="Address" class="form-label">ที่อยู่</label>
+            <textarea class="form-control" id="Address" name="Address" rows="3"></textarea>
+        </div>
+
+        <!-- สีที่ชอบ -->
+        <div class="mb-3">
+            <label for="Color" class="form-label">สีที่ชอบ</label>
+            <select class="form-select" id="Color" name="Color">
+                <option value="สีแดง">สีแดง</option>
+                <option value="สีน้ำเงิน">สีน้ำเงิน</option>
+                <option value="สีเขียว">สีเขียว</option>
+                <option value="สีเหลือง">สีเหลือง</option>
+            </select>
+        </div>
+
+        <!-- แนวเพลงที่ชอบ -->
+        <div class="mb-3">
+            <label class="form-label">แนวเพลงที่ชอบ</label>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="เพื่อชีวิต" name="Music" value="เพื่อชีวิต">
+                <label for="เพื่อชีวิต" class="form-check-label">เพื่อชีวิต</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="ลูกทุ่ง" name="Music" value="ลูกทุ่ง">
+                <label for="ลูกทุ่ง" class="form-check-label">ลูกทุ่ง</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="อื่นๆ" name="Music" value="อื่นๆ">
+                <label for="อื่นๆ" class="form-check-label">อื่นๆ</label>
+            </div>
+        </div>
+
+        <!-- ยินยอมให้เก็บข้อมูล -->
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="Check" name="Consent" value="Agree">
+            <label for="Check" class="form-check-label">ยินยอมให้เก็บข้อมูล</label>
+        </div>
+
+        <!-- ปุ่ม Reset และ Submit -->
+        <div class="d-flex justify-content-between">
+            <button type="reset" class="btn btn-danger px-4">Reset</button>
+            <button type="submit" class="btn btn-success px-4">Submit</button>
+        </div>
     </div>
 </body>
 
