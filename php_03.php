@@ -10,7 +10,7 @@
             <form method="post" action="">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Enter Number</label>
-                    <input name="num" type="num" class="form-control" id="exampleFormControlInput1" placeholder="Enter Number">
+                    <input name="num" type="num" class="form-control" id="num" placeholder="Enter Number">
                 </div>
                 <div class="mb-3">
                     <button class="btn btn-success" type="submit">Submit</button>
@@ -19,7 +19,8 @@
                 
                 <h1>สูตรคูณแม่ :<?php if(isset($_POST['num'])){ echo $_POST['num']; }?></h1>
                 <div class="container mt-5">
-            <?php $myvar = $_POST['num']; ?>
+                <?php $myvar = isset($_POST['num']) ? $_POST['num'] : 0; ?>
+
                 <?php
                 for($i=1;$i <= 12;$i++){
                     $answer = $myvar*$i;
