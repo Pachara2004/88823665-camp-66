@@ -7,8 +7,7 @@ use Illuminate\Http\Request;
 class LaravelForm extends Controller
 {
     //
-    function myfunction(Request $req,$var1=""){
-        $data['value_id'] = $var1;
+    function myfunction(Request $req){
         $data['myinput'] = $req->input('myinput');
         return view('laravelform', $data);
     }

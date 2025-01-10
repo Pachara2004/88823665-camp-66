@@ -24,11 +24,11 @@ Route::post(
 );
 
 Route::get(
-    "/Laravel-form/{id?}",
+    "/Laravel-form",
     [LaravelForm::class, 'myfunction']
 );
 
 Route::post(
-    "/Laravel-form/{id?}",
+    "/Laravel-form",
     [LaravelForm::class, 'myfunction']
 );
