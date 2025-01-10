@@ -1,7 +1,7 @@
-<h1>ตารางสูตรคูณ</h1>
-<?php echo $value_id; ?>
-{{ $value_id }}|{{ $myinput }}
-<div >
+<div class="container mt-5">
+    <h1>ตารางสูตรคูณ</h1>
+    <?php echo $value_id; ?>
+    {{ $value_id }}|{{ $myinput }}
     <form method="post" action="{{ url('/Laravel-form') }}">
         @csrf
         <input type="text" name="myinput">
@@ -9,8 +9,9 @@
             submit
         </button>
     </form>
-    <?php for ($i=0; $i < $myinput; $i++) {?>
-    <h1>{{ $i }}</h1>
+    <?php for ($i=1; $i <= 12; $i++) {?>
+        <?php $answer = $myinput*$i;?>
+        <div><?php echo "$myinput x $i  = $answer";?></div>
 
     <?php }?>
 </div>
