@@ -3,11 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\LaravelForm;
+use App\Http\Controllers\LoginController;
 
+
+
+// Route::get('/login', function () {
+//     [LoginController::class, 'index'];
+// });
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.default');
 });
+
 
 Route::get('/hello', function () {
     return "<h1>Hello World!</h1>";
@@ -23,12 +30,15 @@ Route::post(
     [MyController::class, 'myfunction']
 );
 
-Route::get(
-    "/Laravel-form",
+Route::get("/Laravel-form",
     [LaravelForm::class, 'myfunction']
 );
 
-Route::post(
-    "/Laravel-form",
+Route::post("/Laravel-form",
     [LaravelForm::class, 'myfunction']
 );
+
+Route::get("/login",
+    [LoginController::class, 'index']
+);
+
