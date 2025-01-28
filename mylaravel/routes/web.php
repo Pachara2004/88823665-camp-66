@@ -6,6 +6,8 @@ use App\Http\Controllers\LaravelForm;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ErrorController;
+
 
 
 
@@ -56,5 +58,13 @@ Route::get("/home",
 
 Route::get("/",
     [HomeController::class, 'index']
+);
+
+Route::get("/404",
+    [ErrorController::class, 'error404']
+);
+
+Route::get("/500",
+    [ErrorController::class, 'indexerror500']
 );
 
