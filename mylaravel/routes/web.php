@@ -60,11 +60,4 @@ Route::get("/",
     [HomeController::class, 'index']
 );
 
-Route::get("/404",
-    [ErrorController::class, 'error404']
-);
-
-Route::get("/500",
-    [ErrorController::class, 'error500']
-);
 
