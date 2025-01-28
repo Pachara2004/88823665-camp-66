@@ -64,7 +64,7 @@ Route::get("/",
     [HomeController::class, 'index']
 );
 
-Route::get("/",
+Route::get("/users",
     [UserController::class, 'index']
 );
 
