@@ -65,6 +65,6 @@ Route::get("/404",
 );
 
 Route::get("/500",
-    [ErrorController::class, 'indexerror500']
+    [ErrorController::class, 'error500']
 );
 
