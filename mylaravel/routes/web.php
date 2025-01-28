@@ -6,7 +6,7 @@ use App\Http\Controllers\LaravelForm;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ErrorController;
+use App\Http\Controllers\UserController;
 
 
 
@@ -52,6 +52,10 @@ Route::get("/register",
     [RegisterController::class, 'index']
 );
 
+Route::post("/register",
+    [RegisterController::class, 'create']
+);
+
 Route::get("/home",
     [HomeController::class, 'index']
 );
@@ -59,5 +63,10 @@ Route::get("/home",
 Route::get("/",
     [HomeController::class, 'index']
 );
+
+Route::get("/",
+    [UserController::class, 'index']
+);
+
 
 
