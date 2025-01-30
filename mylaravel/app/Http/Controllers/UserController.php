@@ -21,7 +21,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $data['user'] = $user;
-        return view('user_edit', ['users' => $user]);
+        return view('user.edit', $data);
     }
 
     function edit_action(Request $req)
