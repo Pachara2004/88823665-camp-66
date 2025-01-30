@@ -9,11 +9,13 @@ use App\Models\User;
 class RegisterController extends Controller
 {
     //
-    function index(){
+    function index()
+    {
         return view('register');
     }
 
-    function create(Request $req){
+    function create(Request $req)
+    {
         $obj_user = new User;
         $obj_user->name = $req->input('name');
         $obj_user->email = $req->email;
@@ -21,9 +23,9 @@ class RegisterController extends Controller
         $obj_user->save();
 
         //User::create([
-         //   'name' => $req->name,
-          //  'email' => $req->email,
-            //'password' => $req->password,
+        //   'name' => $req->name,
+        //  'email' => $req->email,
+        //'password' => $req->password,
         //]);
 
         return redirect('/users');

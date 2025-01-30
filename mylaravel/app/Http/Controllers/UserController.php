@@ -10,17 +10,21 @@ use App\Models\User;
 class UserController extends Controller
 {
     //
-    function index(){
+    function index()
+    {
         $users = User::all();
         return view('user', ['users' => $users]);
     }
 
-    function edit($id){
+    function edit($id)
+    {
         $user = User::find($id);
+        $data['user'] = $user;
         return view('user_edit', ['users' => $user]);
     }
 
-    function edit_action(Request $req){
+    function edit_action(Request $req)
+    {
         $user = User::find($req->id);
         $user->name = $req->name;
         $user->email = $req->email;
