@@ -13,6 +13,7 @@ class UserController extends Controller
     function index()
     {
         $users = User::all();
+        $data['user'] = $users;
         return view('user', ['users' => $users]);
     }
 
