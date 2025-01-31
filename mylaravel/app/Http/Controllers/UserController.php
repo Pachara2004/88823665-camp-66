@@ -35,4 +35,11 @@ class UserController extends Controller
 
         return view('user_edit', ['users' => $user]);
     }
+
+    function delete($id)
+    {
+        $user = User::find($id);
+        $user -> delete();
+        return view('user');
+    }
 }

@@ -68,8 +68,9 @@ Route::get("/users",[UserController::class, 'index']);
 
 Route::get("/user/{id}",[UserController::class, 'edit']);
 
-Route::put("/user}",[UserController::class, 'edit_action']);
+Route::put("/user",[UserController::class, 'edit_action']);
 
+Route::put("/user",[UserController::class, 'delete']);
 
 
 
