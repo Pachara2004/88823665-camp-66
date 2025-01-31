@@ -36,10 +36,10 @@ class UserController extends Controller
         return view('user_edit', ['users' => $user]);
     }
 
-    function delete($id)
+    function delete(Request $req)
     {
-        $user = User::find($id);
-        $user -> delete();
-        return view('user');
+        $user = User::find($req->id);
+        $user->delete();
+        return redirect()->route('users');
     }
 }

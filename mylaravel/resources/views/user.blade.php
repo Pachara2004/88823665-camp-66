@@ -58,11 +58,13 @@
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->email }}</td>
                                                     <td>
-                                                        <a href="{{ url('/user/'.$user->id) }}">
-                                                        <button class="btn btn-warning">Edit</button>
-                                                    </a>
+                                                        <a href="{{ url('/user/' . $user->id) }}">
+                                                            <button class="btn btn-warning">Edit</button>
+                                                        </a>
+                                                        <a href="{{ route('user.delete', $user->id) }}">
+                                                            <button class="btn btn-danger">Delete</button>
+                                                        </a>
 
-                                                        <button class="btn btn-danger">Delete</button>
                                                     </td>
                                                 </tr>
                                                 <?php } ?>

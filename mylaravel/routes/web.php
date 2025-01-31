@@ -70,7 +70,7 @@ Route::get("/user/{id}",[UserController::class, 'edit']);
 
 Route::put("/user",[UserController::class, 'edit_action']);
 
-Route::put("/user",[UserController::class, 'delete']);
+Route::get('/user/delete/{id}', [UserController::class, 'delete'])->name('user.delete');
 
 
 
