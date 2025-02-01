@@ -26,51 +26,28 @@ Route::get('/hello', function () {
     return "<h1>Hello World!</h1>";
 });
 
-Route::get(
-    "/mycontroller/{id?}",
-    [MyController::class, 'myfunction']
-);
+Route::get("/mycontroller/{id?}",[MyController::class, 'myfunction']);
 
-Route::post(
-    "/mycontroller/{id?}",
-    [MyController::class, 'myfunction']
-);
+Route::post("/mycontroller/{id?}",[MyController::class, 'myfunction']);
 
-Route::get("/Laravel-form",
-    [LaravelForm::class, 'myfunction']
-);
+Route::get("/Laravel-form",[LaravelForm::class, 'myfunction']);
 
-Route::post("/Laravel-form",
-    [LaravelForm::class, 'myfunction']
-);
+Route::post("/Laravel-form",[LaravelForm::class, 'myfunction']);
 
-Route::get("/login",
-    [LoginController::class, 'index']
-);
+Route::get("/login",[LoginController::class, 'index']);
 
-Route::get("/register",
-    [RegisterController::class, 'index']
-);
+Route::get("/register", [RegisterController::class, 'index']);
 
-Route::post("/register",
-    [RegisterController::class, 'create']
-);
+Route::post("/register", [RegisterController::class, 'create']);
 
-Route::get("/home",
-    [HomeController::class, 'index']
-);
+Route::get("/home", [HomeController::class, 'index']);
 
-Route::get("/",
-    [HomeController::class, 'index']
-);
+Route::get("/", [HomeController::class, 'index']);
 
-Route::get("/users",[UserController::class, 'index']);
+Route::get("/users", [UserController::class, 'index']);
 
-Route::get("/user/{id}",[UserController::class, 'edit']);
+Route::get("/user/{id}", [UserController::class, 'edit']);
 
-Route::put("/user",[UserController::class, 'edit_action']);
+Route::put("/user", [UserController::class, 'edit_action']);
 
 Route::get('/user/delete/{id}', [UserController::class, 'delete'])->name('user.delete');
-
-
-

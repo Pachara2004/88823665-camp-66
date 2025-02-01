@@ -26,20 +26,19 @@ class UserController extends Controller
 
     function edit_action(Request $req)
     {
-        $user = User::find($req->id);
-        $user->name = $req->name;
-        $user->email = $req->email;
-        $user->password = $req->password;
-        $user->save();
+        $muser = User::find($req->id);
+        $muser->name = $req->name;
+        $muser->email = $req->email;
+        $muser->password = $req->password;
+        $muser->save();
 
-
-        return view('user_edit', ['users' => $user]);
+        return redirect('/users');
     }
 
     function delete(Request $req)
     {
         $user = User::find($req->id);
         $user->delete();
-        return redirect()->route('users');
+        return redirect('/users');
     }
 }
