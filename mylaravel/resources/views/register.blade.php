@@ -13,15 +13,15 @@
                     <form action="{{ url('/register') }}" method="post">
                         @csrf
                         <div class="input-group mb-3">
-                            <input type="text" name="name" class="form-control" placeholder="Full Name" />
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Full Name" />
                             <div class="input-group-text"><span class="bi bi-person"></span></div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="email" name="email" class="form-control" placeholder="Email" />
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Email" />
                             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="password" name="password" class="form-control" placeholder="Password" />
+                            <input type="password" name="password" id="pass" class="form-control" placeholder="Password" />
                             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
                         </div>
                         <!--begin::Row-->
@@ -44,9 +44,56 @@
                         </div>
                         <!--end::Row-->
                     </form>
+                    <button type="button" class="btn" onclick="clickme">TEST JS</button>
                 </div>
                 <!-- /.register-card-body -->
             </div>
         </div>
     </div>
+@endsection
+
+@section('Scripts')
+    <script>
+        console.log("Hello World!")
+        //ALERT("Hello World!")
+
+    </script>
+    <script>
+        //alert("Hello World!")
+
+        let myval
+
+        var myval2
+
+        const PI = 3.14
+
+        pi = 2
+
+        console.log(PI, pi)
+
+        let myarry =[];
+        let myarry = Array()
+        myarry[0] = 1
+        myarry["1"] = 2
+        myarry.push(3)
+        myarry.push(4)
+        console.log(myarry)
+        myarry.pop()
+        console.log(myarry)
+        for(a=1; a<10 ; a++){
+            console.log(a);
+        }
+
+        function clickme(){
+            let name = document.getElementById("name")
+            console.log("Hello")
+        }
+
+        $(document).ready(function(){
+
+        })
+
+
+
+    </script>
 @endsection
