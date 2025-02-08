@@ -52,10 +52,10 @@
     </div>
 @endsection
 
-@section('Scripts')
+@section('scripts')
     <script>
         console.log("Hello World!")
-        //ALERT("Hello World!")
+        alert("Hello World!")
 
     </script>
     <script>
