@@ -21,9 +21,14 @@ class LoginController extends Controller
 
         $user = USer::where('email', $req->email)->first();
         if(Hash::check($req->password, $user->password)){
+            session()->forget('error');
+            session(['user' => $user]);
             return redirect('/');
         }else{
+            session(['error' => 'ข้อมูลการเข้าสู่ระบบไม่ถูกต้อง']);
+            return view('login', ['email'=>$req->email]);
             return redirect('/login');
+
         }
     }
 }
