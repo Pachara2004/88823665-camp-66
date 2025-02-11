@@ -35,6 +35,8 @@ Route::get("/Laravel-form",[LaravelForm::class, 'myfunction']);
 Route::post("/Laravel-form",[LaravelForm::class, 'myfunction']);
 
 Route::get("/login",[LoginController::class, 'index']);
+Route::post("/login",[LoginController::class, 'login']);
+
 
 Route::get("/register", [RegisterController::class, 'index']);
 

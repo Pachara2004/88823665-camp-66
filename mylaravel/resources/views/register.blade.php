@@ -10,19 +10,22 @@
             <div class="card">
                 <div class="card-body register-card-body">
                     <p class="register-box-msg">Register a new membership</p>
-                    <form action="{{ url('/register') }}" method="post">
+                    <form action="{{ url('/register') }}" onsubmit="return" method="post">
                         @csrf
                         <div class="input-group mb-3">
                             <input type="text" name="name" id="name" class="form-control" placeholder="Full Name" />
                             <div class="input-group-text"><span class="bi bi-person"></span></div>
+                            <div class="invalid-feedback">Name cannot be empty</div>
                         </div>
                         <div class="input-group mb-3">
                             <input type="email" name="email" id="email" class="form-control" placeholder="Email" />
                             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
+                            <div class="invalid-feedback" id="emailError">Invalid email format</div>
                         </div>
                         <div class="input-group mb-3">
                             <input type="password" name="password" id="pass" class="form-control" placeholder="Password" />
                             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
+                            <div class="invalid-feedback" id="passwordError">Password must contain uppercase, lowercase, and a number</div>
                         </div>
                         <!--begin::Row-->
                         <div class="row">
@@ -32,6 +35,8 @@
                                     <label class="form-check-label" for="flexCheckDefault">
                                         I agree to the <a href="#">terms</a>
                                     </label>
+                                    <div class="invalid-feedback" id="checkboxError">You must agree to the terms</div>
+
                                 </div>
                             </div>
                             <!-- /.col -->
@@ -54,46 +59,54 @@
 
 @section('scripts')
     <script>
-        console.log("Hello World!")
-        alert("Hello World!")
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector("form").addEventListener("submit", function (event) {
+                let isValid = true;
 
-    </script>
-    <script>
-        //alert("Hello World!")
+                let name = document.getElementById("name");
+                let email = document.getElementById("email");
+                let password = document.getElementById("pass");
+                let checkbox = document.getElementById("mycheckbox");
 
-        let myval
+                let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // ตรวจสอบ @ และ .
+                let passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/; // มีตัวเลข, พิมพ์เล็ก, พิมพ์ใหญ่
 
-        var myval2
+                // รีเซ็ตค่าการแจ้งเตือน
+                document.querySelectorAll(".invalid-feedback").forEach(el => el.style.display = "none");
+                document.querySelectorAll(".form-control").forEach(el => el.classList.remove("is-invalid"));
 
-        const PI = 3.14
+                // Validate Name
+                if (name.value.trim() === "") {
+                    name.classList.add("is-invalid");
+                    document.getElementById("nameError").style.display = "block";
+                    isValid = false;
+                }
 
-        pi = 2
+                // Validate Email
+                if (!emailPattern.test(email.value.trim())) {
+                    email.classList.add("is-invalid");
+                    document.getElementById("emailError").style.display = "block";
+                    isValid = false;
+                }
 
-        console.log(PI, pi)
+                // Validate Password
+                if (!passwordPattern.test(password.value.trim())) {
+                    password.classList.add("is-invalid");
+                    document.getElementById("passwordError").style.display = "block";
+                    isValid = false;
+                }
 
-        let myarry =[];
-        let myarry = Array()
-        myarry[0] = 1
-        myarry["1"] = 2
-        myarry.push(3)
-        myarry.push(4)
-        console.log(myarry)
-        myarry.pop()
-        console.log(myarry)
-        for(a=1; a<10 ; a++){
-            console.log(a);
-        }
+                // Validate Checkbox
+                if (!checkbox.checked) {
+                    document.getElementById("checkboxError").style.display = "block";
+                    isValid = false;
+                }
 
-        function clickme(){
-            let name = document.getElementById("name")
-            console.log("Hello")
-        }
-
-        $(document).ready(function(){
-
-        })
-
-
-
+                if (!isValid) {
+                    event.preventDefault(); // ป้องกันการส่งค่า
+                }
+            });
+        });
     </script>
 @endsection
+
