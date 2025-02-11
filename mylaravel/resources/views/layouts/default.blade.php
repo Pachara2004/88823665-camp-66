@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>AdminLTE 4</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
