@@ -53,3 +53,4 @@ Route::get("/user/{id}", [UserController::class, 'edit']);
 Route::put("/user", [UserController::class, 'edit_action']);
 
 Route::get('/user/delete/{id}', [UserController::class, 'delete'])->name('user.delete');
+Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy');
