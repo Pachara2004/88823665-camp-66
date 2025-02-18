@@ -20,7 +20,7 @@ class LoginController extends Controller
         //print_r($req->password);
 
         $user = USer::where('email', $req->email)->first();
-        if(Hash::check($req->password, $user->password)){
+        if($user != null && Hash::check($req->password, $user->password)){
             session()->forget('error');
             session(['user' => $user]);
             return redirect('/');
