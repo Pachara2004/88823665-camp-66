@@ -10,7 +10,6 @@ class HomeController extends Controller
     {
         $user = session()->get('user');
 
-        print_r($user);
     }
 
     function index(){
